@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4618921847969294950
+--- !u!1 &6908480572146113077
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,72 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1564058447925895703}
+  - component: {fileID: 3971336473481108689}
+  - component: {fileID: 7514770058036513219}
+  - component: {fileID: 6443510485429403405}
+  - component: {fileID: 1185933151637014583}
+  - component: {fileID: -1199030548082557762}
+  - component: {fileID: 7523559830760343607}
   m_Layer: 0
-  m_Name: BulletSpawn (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1564058447925895703
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4618921847969294950}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.83, y: -2.88, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.057451453}
-  m_Children: []
-  m_Father: {fileID: 5170299366696825975}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5170299366696825970
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5170299366696825975}
-  - component: {fileID: 5170299366696825968}
-  - component: {fileID: 5170299366696825969}
-  - component: {fileID: 676616353}
-  - component: {fileID: 8516808097076162843}
-  - component: {fileID: -7253642613543624867}
-  m_Layer: 0
-  m_Name: Gladiator
+  m_Name: Lightning
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5170299366696825975
+--- !u!4 &3971336473481108689
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5170299366696825970}
+  m_GameObject: {fileID: 6908480572146113077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 17.406}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 17.406}
   m_Children:
-  - {fileID: 9041239746440899269}
-  - {fileID: 1564058447925895703}
+  - {fileID: 4344210982710995654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5170299366696825968
+--- !u!212 &7514770058036513219
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5170299366696825970}
+  m_GameObject: {fileID: 6908480572146113077}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -107,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b7c69a1f9f4ac04fbfcbac198fc9730, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3577371b4d02bc4b9217637fe425e66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -118,40 +87,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &5170299366696825969
+--- !u!65 &6443510485429403405
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5170299366696825970}
+  m_GameObject: {fileID: 6908480572146113077}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.719202, y: 5.725393, z: 0.20000005}
-  m_Center: {x: -0.0066370964, y: -0.6469861, z: -2.0888002e-15}
---- !u!114 &676616353
+  m_Size: {x: 6.0201735, y: 5.5906463, z: 0.20000005}
+  m_Center: {x: -0.03567072, y: 1.1778654, z: 0}
+--- !u!114 &1185933151637014583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5170299366696825970}
+  m_GameObject: {fileID: 6908480572146113077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ae04f0c535075c42a4709b8f24c8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 60
+  maxHealth: 250
   currentHealth: 0
---- !u!114 &8516808097076162843
+--- !u!114 &-1199030548082557762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5170299366696825970}
+  m_GameObject: {fileID: 6908480572146113077}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e0f1baeb19684042b9ec7f1c6a1267c, type: 3}
@@ -160,27 +129,26 @@ MonoBehaviour:
   destinationZ: 18
   destinationX: 7
   movementSpeedZ: 3
-  movementSpeedX: 2
+  movementSpeedX: 4
   movingRight: 0
---- !u!114 &-7253642613543624867
+--- !u!114 &7523559830760343607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5170299366696825970}
+  m_GameObject: {fileID: 6908480572146113077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b7f74fae464dce479d8361b39c5d5ed, type: 3}
+  m_Script: {fileID: 11500000, guid: ce040f6696d522242a14443217487010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSpeed: 900
-  shootTimer: 0.5
+  shootSpeed: 1300
+  shootTimer: 0.2
   bulletSpawns:
-  - {fileID: 9041239746440899269}
-  - {fileID: 1564058447925895703}
+  - {fileID: 4344210982710995654}
   bullet: {fileID: 7597538765452778029, guid: ab3ca8f7c435ee648ae45d3775ea739a, type: 3}
---- !u!1 &7750171255295370938
+--- !u!1 &7187340611206427655
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +156,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9041239746440899269}
+  - component: {fileID: 4344210982710995654}
   m_Layer: 0
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -196,17 +164,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9041239746440899269
+--- !u!4 &4344210982710995654
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750171255295370938}
+  m_GameObject: {fileID: 7187340611206427655}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.83, y: -2.88, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.057451453}
+  m_LocalPosition: {x: -1.09, y: -2.01, z: -0.00008917069}
+  m_LocalScale: {x: 0.7692308, y: 0.7692308, z: 0.057451453}
   m_Children: []
-  m_Father: {fileID: 5170299366696825975}
+  m_Father: {fileID: 3971336473481108689}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
