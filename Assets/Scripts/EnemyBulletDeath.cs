@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
 
-public class BulletDeath : MonoBehaviour
+public class EnemyBulletDeath : MonoBehaviour
 {
     [SerializeField] private GameObject impactEffect;
     [SerializeField] float lifespan;
@@ -24,7 +24,7 @@ public class BulletDeath : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject collisionGameObject = collision.gameObject;
-        if (collisionGameObject.tag == "Enemy")
+        if (collisionGameObject.tag == "Player")
         {
             collisionGameObject.GetComponent<Health>().currentHealth -= bulletDamage;
             Despawn();
