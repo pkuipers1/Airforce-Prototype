@@ -26,6 +26,17 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && !autoShooting)
+        {
+            Debug.Log("E pressed (on)");
+            autoShooting = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("E pressed (off)");
+            autoShooting = false;
+        }
+        
         if (Input.GetKey(KeyCode.Space) && !isShooting && !autoShooting)
         {
             StartCoroutine(Shoot());

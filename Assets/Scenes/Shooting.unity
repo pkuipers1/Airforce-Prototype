@@ -502,10 +502,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootSpeed: 900
   shootTimer: 0.5
-  bulletSpawn1: {fileID: 1187881540}
-  bulletSpawn2: {fileID: 1168064999}
-  bulletSpawn3: {fileID: 0}
-  bulletSpawn4: {fileID: 0}
+  bulletSpawns:
+  - {fileID: 1187881540}
+  - {fileID: 1168064999}
   bullet: {fileID: 7597538765452778029, guid: ac838965f5faa5d40830f6cf8aedea2c, type: 3}
   autoShooting: 0
 --- !u!1 &2104705394
