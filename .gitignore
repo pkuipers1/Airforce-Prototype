@@ -95,3 +95,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+.idea/.idea.Airforce/.idea/workspace.xml
+.idea/.idea.Airforce/.idea/projectSettingsUpdater.xml
