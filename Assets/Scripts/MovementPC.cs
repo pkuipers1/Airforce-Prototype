@@ -5,43 +5,50 @@ using UnityEngine.UIElements;
 
 public class MovementPC : MonoBehaviour
 {
-    public float playerPositionX;
-    public float playerPositionY;
+    private float playerPositionX;
+    private float playerPositionY;
+    
+    [SerializeField] private float maxPlayerX;
+    [SerializeField] private float maxPlayerY;
+    
+    [SerializeField] private float playerSpeedX;
+    [SerializeField] private float playerSpeedY;    
+    
     // Update is called once per frame
     void Update()
     {
         playerPositionX = transform.position.x;
-        playerPositionY = transform.position.y;
+        playerPositionY = transform.position.z;
 
-        if (playerPositionX < 2.45)
+        if (playerPositionX < maxPlayerX)
         {
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                transform.position += Vector3.right * Time.deltaTime * 3f;
+                transform.position += Vector3.right * Time.deltaTime * playerSpeedX;
             }
         }
 
-        if (playerPositionX > -2.45)
+        if (playerPositionX > -maxPlayerX)
         {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                transform.position += Vector3.left * Time.deltaTime * 3f;
+                transform.position += Vector3.left * Time.deltaTime * playerSpeedX;
             }
         }
 
-        if (playerPositionY > -4.25)
+        if (playerPositionY > -maxPlayerY)
         {
             if (Input.GetKey(KeyCode.DownArrow))
             {
-                transform.position += Vector3.down * Time.deltaTime * 2.5f;
+                transform.position += Vector3.back * Time.deltaTime * playerSpeedY;
             }
         }
         
-        if (playerPositionY < 4.25)
+        if (playerPositionY < maxPlayerY)
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                transform.position += Vector3.up * Time.deltaTime * 3.5f;
+                transform.position += Vector3.forward * Time.deltaTime * playerSpeedY;
             }
         }
     }
