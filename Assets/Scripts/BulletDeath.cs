@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class BulletDeath : MonoBehaviour
 {
-    public GameObject impactEffect;
-    public float lifespan; 
+    [SerializeField] private GameObject impactEffect;
+    [SerializeField] float lifespan;
     
     // Update is called once per frame
     void Update()
@@ -22,7 +23,7 @@ public class BulletDeath : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GameObject collisionGameObject = collision.gameObject;
-        if (collisionGameObject.tag != "Player")
+        if (collisionGameObject.tag == "Enemy")
         {
             Despawn();
         }
