@@ -484,10 +484,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428bcf886f196a3418ba71577bbb7b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayerX: 11
-  maxPlayerY: 22
-  playerSpeedX: 10
-  playerSpeedY: 15
+  maxPlayerX: 14
+  maxPlayerY: 25
+  playerSpeedX: 15
+  playerSpeedY: 20
 --- !u!114 &1984279013
 MonoBehaviour:
   m_ObjectHideFlags: 0

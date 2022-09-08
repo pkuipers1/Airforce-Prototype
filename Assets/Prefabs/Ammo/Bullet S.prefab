@@ -127,3 +127,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactEffect: {fileID: 5491333802220862987, guid: 6ea23778203b4544fb38ee5030fef8ff, type: 3}
+  lifespan: 5
