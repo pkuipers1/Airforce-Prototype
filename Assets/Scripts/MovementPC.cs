@@ -8,11 +8,11 @@ public class MovementPC : MonoBehaviour
     private float playerPositionX;
     private float playerPositionY;
     
-    public float maxPlayerX;
-    public float maxPlayerY;
-
-    public float playerSpeedX;
-    public float playerSpeedY;
+    [SerializeField] private float maxPlayerX;
+    [SerializeField] private float maxPlayerY;
+    
+    [SerializeField] private float playerSpeedX;
+    [SerializeField] private float playerSpeedY;    
     
     // Update is called once per frame
     void Update()

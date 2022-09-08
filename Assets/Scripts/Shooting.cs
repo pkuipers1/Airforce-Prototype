@@ -5,23 +5,21 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
 
-    public float shootSpeed;
-    public float shootTimer;
+    [SerializeField] private float shootSpeed;
+    [SerializeField] private float shootTimer;
     
-    public Transform bulletSpawn1;
-    public Transform bulletSpawn2;
-    public Transform bulletSpawn3;
-    public Transform bulletSpawn4;
+    [SerializeField] private List<Transform> bulletSpawns;
     
-    public GameObject bullet;
-
+    [SerializeField] private GameObject bullet;
+    
     private bool isShooting;
-
-    public bool autoShooting;
+    
+    [SerializeField] private bool autoShooting;  
     
     // Start is called before the first frame update
     void Start()
     {
+        autoShooting = false;
         isShooting = false;
     }
 
@@ -41,8 +39,8 @@ public class Shooting : MonoBehaviour
     IEnumerator Shoot()
     {
         isShooting = true;
-        GameObject newBullet1 = Instantiate(bullet, bulletSpawn1.position, Quaternion.identity);
-        GameObject newBullet2 = Instantiate(bullet, bulletSpawn2.position, Quaternion.identity);
+        GameObject newBullet1 = Instantiate(bullet, bulletSpawns[0].position, Quaternion.identity);
+        GameObject newBullet2 = Instantiate(bullet, bulletSpawns[1].position, Quaternion.identity);
         newBullet1.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, shootSpeed * Time.deltaTime);
         newBullet2.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, shootSpeed * Time.deltaTime);
         yield return new WaitForSeconds(shootTimer);
