@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,20 +6,30 @@ using UnityEngine;
 public class ButtonAutoFire : MonoBehaviour
 {
     public GameObject AutomaticON;
+    public GameObject AutomaticOFF;
 
     void Start()
     {
-        AutomaticON.SetActive(true);
+        AutomaticON.SetActive(false);
+        AutomaticOFF.SetActive(false);
     }
-    public void AutoFireON()
+
+    private void Update()
     {
-        if (AutomaticON.activeInHierarchy == true)
-        {
-            AutomaticON.SetActive(false);
-        }
-        else if (AutomaticON.activeInHierarchy == false)
+        CheckAutoFire();
+    }
+
+    public void CheckAutoFire()
+    {
+        if (Shooting.autoFire)
         {
             AutomaticON.SetActive(true);
+            AutomaticOFF.SetActive(false);
+        }
+        else if (!Shooting.autoFire)
+        {
+            AutomaticON.SetActive(false);
+            AutomaticOFF.SetActive(true);
         }
     }
 }

@@ -14,7 +14,9 @@ public class Shooting : MonoBehaviour
     
     private bool isShooting;
     
-    [SerializeField] private bool autoShooting;  
+    [SerializeField] private bool autoShooting;
+
+    [SerializeField] public static bool autoFire;
     
     // Start is called before the first frame update
     void Start()
@@ -29,10 +31,12 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !autoShooting)
         {
             autoShooting = true;
+            autoFire = true;
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
             autoShooting = false;
+            autoFire = false;
         }
         
         if (Input.GetKey(KeyCode.Space) && !isShooting && !autoShooting)
