@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private GameObject explosionEffect;
     [SerializeField] private float maxHealth;
     [SerializeField] public float currentHealth;
 
@@ -18,6 +19,7 @@ public class Health : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
