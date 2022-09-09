@@ -174,8 +174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7f74fae464dce479d8361b39c5d5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSpeed: 900
-  shootTimer: 0.5
+  shootSpeed: 650
+  shootTimer: 1.5
   bulletSpawns:
   - {fileID: 9041239746440899269}
   - {fileID: 1564058447925895703}

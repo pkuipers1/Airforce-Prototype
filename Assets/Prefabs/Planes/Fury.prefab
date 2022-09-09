@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootSpeed: 700
-  shootTimer: 0.5
+  shootTimer: 1
   bulletSpawns:
   - {fileID: 3615869700061418794}
   - {fileID: 2821872863090890028}
