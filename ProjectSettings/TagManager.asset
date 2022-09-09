@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Bullet Spawn
   - Enemy
+  - HealthParticle
+  - BombParticle
+  - EngineParticle
+  - AmmoParticle
   layers:
   - Default
   - TransparentFX

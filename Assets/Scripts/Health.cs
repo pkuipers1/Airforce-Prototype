@@ -8,10 +8,14 @@ public class Health : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] public float currentHealth;
 
+    [SerializeField] public static float playerHealth;
+    [SerializeField] public static bool playerSpawned;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        playerSpawned = true;
     }
 
     // Update is called once per frame
@@ -21,6 +25,11 @@ public class Health : MonoBehaviour
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
+
+        if (gameObject.CompareTag(("Player")))
+        {
+            playerHealth = Mathf.RoundToInt(currentHealth);
         }
     }
 }
