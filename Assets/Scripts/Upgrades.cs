@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Upgrades : MonoBehaviour
 {
-    public Text ScoreText;
+    public GameObject ScoreText;
     public static int Score = 0;
     public int Value = 1;
 
@@ -15,13 +16,13 @@ public class Upgrades : MonoBehaviour
     void Start()
     {
         Score = 0;
-        EngineON.SetActive(true);
-        BombON.SetActive(true);
+        EngineON.SetActive(false);
+        BombON.SetActive(false);
     }
 
     void Update()
     {
-        ScoreText.text = "" + Score;
+        ScoreText.GetComponent<TextMeshProUGUI>().text = Score.ToString();
     }
 
     private void OnParticleCollision(GameObject other)
@@ -33,11 +34,11 @@ public class Upgrades : MonoBehaviour
                 break;
 
             case "Engine":
-                EngineON.SetActive(false);
+                EngineON.SetActive(true);
                 break;
 
             case "Bomb":
-                BombON.SetActive(false);
+                BombON.SetActive(true);
                 break;
 
         }
