@@ -13,10 +13,10 @@ public class SwitchScene : MonoBehaviour
 
     private void Update()
     {
-        if (Health.playerHealth <= 0 && Health.playerSpawned)
+        if (Health.playerHealth <= 0 && StartSettings.currentScene == "Airforce")
         {
             SceneManager.LoadScene("Death");
-            Health.playerSpawned = false;
+            //Health.playerSpawned = false;
         }
     }
 }

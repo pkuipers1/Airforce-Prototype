@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField] public static bool playerSpawned;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         currentHealth = maxHealth;
         playerSpawned = true;
