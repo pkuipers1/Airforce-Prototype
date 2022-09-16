@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1975388416, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: maxHealth
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975388416, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
       propertyPath: explosionEffect
       value: 
       objectReference: {fileID: 4629358791550953202, guid: 6efec460d313a10488cf3271a941c730, type: 3}

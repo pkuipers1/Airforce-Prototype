@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class Health : MonoBehaviour
     {
         currentHealth = maxHealth;
         playerSpawned = true;
+        
+        if (gameObject.CompareTag(("Player")))
+        {
+            playerHealth = Mathf.RoundToInt(currentHealth);
+        }
     }
 
     // Update is called once per frame
@@ -30,6 +36,11 @@ public class Health : MonoBehaviour
         if (gameObject.CompareTag(("Player")))
         {
             playerHealth = Mathf.RoundToInt(currentHealth);
+        }
+
+        if (playerHealth <= 0)
+        {
+            SceneManager.LoadScene(2);
         }
     }
 }

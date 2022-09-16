@@ -6,24 +6,45 @@ using UnityEngine.SceneManagement;
 
 public class StartSettings : MonoBehaviour
 {
+    private MenuHolderScript menuHolder;
+    
     public static StartSettings Instance;
 
-    public static string currentScene;
-
+    public static bool playerLives = true;
+    
     private void Awake()
     {
+        menuHolder = GameObject.Find("MenuHolder").GetComponent<MenuHolderScript>();
+
         if (Instance != null)
         {
             Destroy(gameObject);
             return;
         }
+
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            menuHolder.ChangeMenu();
+        }
         
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
-    private void Update()
+    
+    void Update()
     {
-        currentScene = SceneManager.GetActiveScene().name;
+        if (SceneManager.GetActiveScene().name == "Airforce" && Health.playerHealth <= 0)
+        {
+            SceneManager.LoadScene("Menu");
+            playerLives = false;
+            Debug.Log("LOAD DEATH MENU");
+            if (SceneManager.GetActiveScene().name == "Menu")
+            {
+                menuHolder.ChangeMenu();
+                Debug.Log("Change menu");
+            }
+        }
+        
+        Debug.Log("Player health: " + Health.playerHealth);
     }
 }
