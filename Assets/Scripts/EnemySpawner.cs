@@ -7,7 +7,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private List<GameObject> planes;
 
     [SerializeField] public bool planeSpawned;
-
+    
+    [SerializeField] private float maxSpawnCooldown;
+    [SerializeField] private float minSpawnCooldown;
+    
     [SerializeField] private float spawnCooldown;
 
     public GameObject currentPlane;
@@ -41,6 +44,6 @@ public class EnemySpawner : MonoBehaviour
 
     void SetSpawnCooldown()
     {
-        spawnCooldown = (Random.Range(5.0f, 15.0f));
+        spawnCooldown = (Random.Range(minSpawnCooldown, maxSpawnCooldown));
     }
 }
