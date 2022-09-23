@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShooting4Guns : MonoBehaviour
+public class EnemyShooting3Guns : MonoBehaviour
 {
 
     [SerializeField] private float shootSpeed;
@@ -35,11 +35,9 @@ public class EnemyShooting4Guns : MonoBehaviour
         GameObject newBullet1 = Instantiate(bullet, bulletSpawns[0].position, Quaternion.identity);
         GameObject newBullet2 = Instantiate(bullet, bulletSpawns[1].position, Quaternion.identity);
         GameObject newBullet3 = Instantiate(bullet, bulletSpawns[2].position, Quaternion.identity);
-        GameObject newBullet4 = Instantiate(bullet, bulletSpawns[3].position, Quaternion.identity);
         newBullet1.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -shootSpeed * Time.deltaTime);
         newBullet2.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -shootSpeed * Time.deltaTime);
         newBullet3.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -shootSpeed * Time.deltaTime);
-        newBullet4.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -shootSpeed * Time.deltaTime);
         yield return new WaitForSeconds(shootTimer);
         isShooting = false;
     }

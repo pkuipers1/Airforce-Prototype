@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planes:
-  - {fileID: 5170299366696825970, guid: def1269671eb7254896134f566b767b6, type: 3}
-  - {fileID: 5198339006730866543, guid: 831e16bbd9e8268418fae560ae38b9b7, type: 3}
   - {fileID: 6740474651192645243, guid: 19dc3698b72f5e84580f41417ae71f48, type: 3}
-  - {fileID: 7433645986625874952, guid: 995dac8e5848b1442a119d025fed2c1a, type: 3}
-  - {fileID: 6908480572146113077, guid: 25694cc35f1d8e644a51f179c6d63916, type: 3}
+  - {fileID: 1227184976931972326, guid: ccb371029f101b1438053d2892291d8b, type: 3}
   planeSpawned: 0
+  maxSpawnCooldown: 10
+  minSpawnCooldown: 3
   spawnCooldown: 0
+  currentPlane: {fileID: 0}
