@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     [Header("Health Variables")]
     [SerializeField] private float maxHealth;
     [SerializeField] public float currentHealth;
-
+    
     public static float playerHealth;
     public static bool playerSpawned;
 
