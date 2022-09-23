@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1975388416, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
       propertyPath: maxHealth
-      value: 15
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1975388416, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
       propertyPath: explosionEffect
@@ -1049,7 +1049,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071932921}
-  - component: {fileID: 1071932920}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -1057,18 +1056,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1071932920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071932919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3112b2f77fae7c947bed0f3ca11050e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1071932921
 Transform:
   m_ObjectHideFlags: 0
@@ -1519,6 +1506,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1241584793176899588, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
+      propertyPath: planes.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241584793176899588, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
+      propertyPath: planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 8733141318489655285, guid: 7f87d0a6737232743bf13a43a3d59bc4, type: 3}
+    - target: {fileID: 1241584793176899588, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
+      propertyPath: planes.Array.data[1]
+      value: 
+      objectReference: {fileID: 8017068242571991210, guid: 256eaea55564f8f4b9cd7dae99388436, type: 3}
+    - target: {fileID: 1241584793176899588, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
+      propertyPath: planes.Array.data[2]
+      value: 
+      objectReference: {fileID: 1227184976931972326, guid: ccb371029f101b1438053d2892291d8b, type: 3}
+    - target: {fileID: 1241584793176899588, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
+      propertyPath: planes.Array.data[3]
+      value: 
+      objectReference: {fileID: 7783467338330329744, guid: ce02389b0070cb84c8d1726a3b900226, type: 3}
+    - target: {fileID: 1241584793176899588, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
+      propertyPath: planes.Array.data[4]
+      value: 
+      objectReference: {fileID: 4857970375661893281, guid: 12d34f9999a74964dba237c27566b3ce, type: 3}
+    - target: {fileID: 1241584793176899588, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
+      propertyPath: planes.Array.data[5]
+      value: 
+      objectReference: {fileID: 4857970375661893281, guid: 12d34f9999a74964dba237c27566b3ce, type: 3}
+    - target: {fileID: 1241584793176899588, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
+      propertyPath: planes.Array.data[6]
+      value: 
+      objectReference: {fileID: 4857970375661893281, guid: 12d34f9999a74964dba237c27566b3ce, type: 3}
     - target: {fileID: 1241584793176899589, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn

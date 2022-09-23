@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     [SerializeField] private GameObject explosionEffect;
+    
+    [Header("Health Variables")]
     [SerializeField] private float maxHealth;
     [SerializeField] public float currentHealth;
 
-    [SerializeField] public static float playerHealth;
-    [SerializeField] public static bool playerSpawned;
+    public static float playerHealth;
+    public static bool playerSpawned;
 
     // Start is called before the first frame update
     void Awake()
