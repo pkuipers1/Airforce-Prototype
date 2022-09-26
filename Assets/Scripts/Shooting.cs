@@ -47,6 +47,8 @@ public class Shooting : MonoBehaviour
         {
             StartCoroutine(Shoot());
         }
+        
+        
     }
 
     IEnumerator Shoot()
@@ -56,6 +58,9 @@ public class Shooting : MonoBehaviour
         GameObject newBullet1 = Instantiate(bullet, bulletSpawns[0].position, Quaternion.identity);
         GameObject newBullet2 = Instantiate(bullet, bulletSpawns[1].position, Quaternion.identity);
         
+        //newBullet1.GetComponent<GameObject>().transform.rotation = Quaternion.Euler(90, 0, 0); 
+        //newBullet2.GetComponent<GameObject>().transform.rotation = Quaternion.Euler(90, 0, 0); 
+
         newBullet1.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, shootSpeed * Time.deltaTime);
         newBullet2.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, shootSpeed * Time.deltaTime);
         

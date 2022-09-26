@@ -31,6 +31,19 @@ public class BulletDeath : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            other.GetComponent<Health>().currentHealth -= bulletDamage;
+            Despawn();
+        }
+        if (other.CompareTag("Bullet"))
+        {
+            Despawn();
+        }
+    }
+
     void Despawn()
     {
         Instantiate(impactEffect, transform.position, Quaternion.identity);

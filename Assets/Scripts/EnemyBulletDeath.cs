@@ -21,12 +21,15 @@ public class EnemyBulletDeath : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        GameObject collisionGameObject = collision.gameObject;
-        if (collisionGameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            collisionGameObject.GetComponent<Health>().currentHealth -= bulletDamage;
+            other.GetComponent<Health>().currentHealth -= bulletDamage;
+            Despawn();
+        }
+        if (other.CompareTag("Bullet"))
+        {
             Despawn();
         }
     }

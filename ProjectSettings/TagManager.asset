@@ -10,6 +10,7 @@ TagManager:
   - BombParticle
   - EngineParticle
   - AmmoParticle
+  - Bullet
   layers:
   - Default
   - TransparentFX

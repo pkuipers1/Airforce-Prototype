@@ -14,11 +14,11 @@ public class MovementPC : MonoBehaviour
     [SerializeField] private float playerSpeedX;
     [SerializeField] private float playerSpeedY;
     
-    [SerializeField] public float maxRotation;
-    [SerializeField] private float rotationSpeed = 0;
-    [SerializeField] private float defaultRotation = -90;
-    
-    [SerializeField] private float rotation = 0;
+    [SerializeField] private float rotationSpeedX = 0;
+    [SerializeField] private float rotationSpeedY = 0;
+
+    [SerializeField] private float rotationX = 0;
+    [SerializeField] private float rotationY = 0;
 
     [SerializeField] private bool keyPressed;
     
@@ -30,31 +30,43 @@ public class MovementPC : MonoBehaviour
         
         playerPositionX = transform.position.x;
         playerPositionY = transform.position.z;
-
-
-        if(rotation < 60 && rotation > -60)
+        
+        if(rotationX < 60 && rotationX > -60)
         {
-            rotation += rotationSpeed;    
+            rotationX += rotationSpeedX;    
+        }
+        
+        if(rotationY < 60 && rotationY > -60)
+        {
+            rotationY += rotationSpeedY;    
         }
 
         if (!keyPressed)
         {
-            rotationSpeed *= 0.1f;
+            rotationSpeedX *= 0.1f;
+            rotationSpeedY *= 0.1f;
         }
         
-        if (rotation != 0)
+        if (rotationX != 0)
         {
-            rotation *= 0.88f;
+            rotationX *= 0.88f;
             
         }
         
-        //Debug.Log("rotation : " + rotation);
-        //Debug.Log("rotation speed : " + rotationSpeed);
+        if (rotationY != 0)
+        {
+            rotationY *= 0.88f;
+            
+        }
         
-        transform.rotation = Quaternion.Euler(rotation+90,90,-90);
-      
+        Debug.Log("rotation X: " + rotationX);
+        Debug.Log("rotation speed X: " + rotationSpeedX);
         
+        Debug.Log("rotation Y: " + rotationY);
+        Debug.Log("rotation speed Y: " + rotationSpeedY);
         
+        transform.rotation = Quaternion.Euler(rotationX+90, rotationY+90, -90);
+
         if (playerPositionX < maxPlayerX)
         {
             if (Input.GetKey(KeyCode.RightArrow))
@@ -62,9 +74,9 @@ public class MovementPC : MonoBehaviour
                 keyPressed = true;
 
                 transform.position += Vector3.right * Time.deltaTime * playerSpeedX;
-                if (rotationSpeed <= 10)
+                if (rotationSpeedX <= 10)
                 {
-                    rotationSpeed +=5;
+                    rotationSpeedX +=5;
                 }
             }
         }
@@ -76,9 +88,9 @@ public class MovementPC : MonoBehaviour
                 keyPressed = true;
 
                 transform.position += Vector3.left * Time.deltaTime * playerSpeedX;
-                if (rotationSpeed <= 10)
+                if (rotationSpeedX <= 10)
                 {
-                    rotationSpeed -= 5;
+                    rotationSpeedX -= 5;
                 }
             }
         }
@@ -87,7 +99,13 @@ public class MovementPC : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.DownArrow))
             {
+                keyPressed = true;
+                
                 transform.position += Vector3.back * Time.deltaTime * playerSpeedY;
+                if (rotationSpeedY <= 10)
+                {
+                    rotationSpeedY -=5;
+                }
             }
         }
         
@@ -95,7 +113,13 @@ public class MovementPC : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {
+                keyPressed = true;
+                
                 transform.position += Vector3.forward * Time.deltaTime * playerSpeedY;
+                if (rotationSpeedY <= 10)
+                {
+                    rotationSpeedY +=5;
+                }
             }
         }
     }
