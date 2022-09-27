@@ -11,7 +11,9 @@ public class EnemyShooting2Guns : MonoBehaviour
     [SerializeField] private List<Transform> bulletSpawns;
     
     [SerializeField] private GameObject bullet;
-    
+
+    [SerializeField] private List<ParticleSystem> flashEffects;
+
     private bool isShooting;
     
     // Start is called before the first frame update
@@ -32,10 +34,15 @@ public class EnemyShooting2Guns : MonoBehaviour
     IEnumerator Shoot()
     {
         isShooting = true;
-        GameObject newBullet1 = Instantiate(bullet, bulletSpawns[0].position, Quaternion.identity);
-        GameObject newBullet2 = Instantiate(bullet, bulletSpawns[1].position, Quaternion.identity);
-        newBullet1.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -shootSpeed * Time.deltaTime);
-        newBullet2.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -shootSpeed * Time.deltaTime);
+        foreach (var spawn in bulletSpawns)
+        {
+            var newBullet = Instantiate(bullet, spawn.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -shootSpeed * Time.deltaTime);
+        }
+        foreach (var flashEffect in flashEffects)
+        {
+            flashEffect.Play();
+        }
         yield return new WaitForSeconds(shootTimer);
         isShooting = false;
     }

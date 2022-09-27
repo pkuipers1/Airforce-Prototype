@@ -11,6 +11,8 @@ public class EnemyShooting1Gun : MonoBehaviour
     [SerializeField] private List<Transform> bulletSpawns;
     
     [SerializeField] private GameObject bullet;
+
+    [SerializeField] private List<ParticleSystem> flashEffects;
     
     private bool isShooting;
     
@@ -32,8 +34,15 @@ public class EnemyShooting1Gun : MonoBehaviour
     IEnumerator Shoot()
     {
         isShooting = true;
-        GameObject newBullet1 = Instantiate(bullet, bulletSpawns[0].position, Quaternion.identity);
-        newBullet1.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -shootSpeed * Time.deltaTime);
+        foreach (var spawn in bulletSpawns)
+        {
+            var newBullet = Instantiate(bullet, spawn.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, -shootSpeed * Time.deltaTime);
+        }
+        foreach (var flashEffect in flashEffects)
+        {
+            flashEffect.Play();
+        }
         yield return new WaitForSeconds(shootTimer);
         isShooting = false;
     }

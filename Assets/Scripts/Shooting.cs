@@ -18,6 +18,9 @@ public class Shooting : MonoBehaviour
 
     [SerializeField] public static bool autoFire;
     
+    [SerializeField] public ParticleSystem muzzleFlash;
+    [SerializeField] public ParticleSystem muzzleFlash2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +60,9 @@ public class Shooting : MonoBehaviour
         
         GameObject newBullet1 = Instantiate(bullet, bulletSpawns[0].position, Quaternion.identity);
         GameObject newBullet2 = Instantiate(bullet, bulletSpawns[1].position, Quaternion.identity);
-        
+
+        muzzleFlash.Play();
+        muzzleFlash2.Play();
         //newBullet1.GetComponent<GameObject>().transform.rotation = Quaternion.Euler(90, 0, 0); 
         //newBullet2.GetComponent<GameObject>().transform.rotation = Quaternion.Euler(90, 0, 0); 
 

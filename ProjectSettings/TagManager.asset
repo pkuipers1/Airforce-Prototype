@@ -11,6 +11,8 @@ TagManager:
   - EngineParticle
   - AmmoParticle
   - Bullet
+  - BulletEnemy
+  - BulletPlayer
   layers:
   - Default
   - TransparentFX

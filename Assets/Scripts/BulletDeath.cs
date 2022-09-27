@@ -38,7 +38,7 @@ public class BulletDeath : MonoBehaviour
             other.GetComponent<Health>().currentHealth -= bulletDamage;
             Despawn();
         }
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("BulletEnemy"))
         {
             Despawn();
         }

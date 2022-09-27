@@ -65,7 +65,7 @@ public class MovementPC : MonoBehaviour
         Debug.Log("rotation Y: " + rotationY);
         Debug.Log("rotation speed Y: " + rotationSpeedY);
         
-        transform.rotation = Quaternion.Euler(rotationX+90, rotationY+90, -90);
+        transform.rotation = Quaternion.Euler(rotationY, 0, rotationX);
 
         if (playerPositionX < maxPlayerX)
         {
@@ -76,7 +76,7 @@ public class MovementPC : MonoBehaviour
                 transform.position += Vector3.right * Time.deltaTime * playerSpeedX;
                 if (rotationSpeedX <= 10)
                 {
-                    rotationSpeedX +=5;
+                    rotationSpeedX -=5;
                 }
             }
         }
@@ -90,7 +90,7 @@ public class MovementPC : MonoBehaviour
                 transform.position += Vector3.left * Time.deltaTime * playerSpeedX;
                 if (rotationSpeedX <= 10)
                 {
-                    rotationSpeedX -= 5;
+                    rotationSpeedX += 5;
                 }
             }
         }
@@ -102,9 +102,9 @@ public class MovementPC : MonoBehaviour
                 keyPressed = true;
                 
                 transform.position += Vector3.back * Time.deltaTime * playerSpeedY;
-                if (rotationSpeedY <= 10)
+                if (rotationSpeedY <= 5)
                 {
-                    rotationSpeedY -=5;
+                    rotationSpeedY -=2;
                 }
             }
         }
@@ -116,9 +116,9 @@ public class MovementPC : MonoBehaviour
                 keyPressed = true;
                 
                 transform.position += Vector3.forward * Time.deltaTime * playerSpeedY;
-                if (rotationSpeedY <= 10)
+                if (rotationSpeedY <= 5)
                 {
-                    rotationSpeedY +=5;
+                    rotationSpeedY +=2;
                 }
             }
         }

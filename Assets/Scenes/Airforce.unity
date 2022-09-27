@@ -150,50 +150,6 @@ PrefabInstance:
       propertyPath: ScoreText
       value: 
       objectReference: {fileID: 2507255081493387681}
-    - target: {fileID: 5565171264610940735, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264610940735, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264610940735, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264610940735, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264610940735, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264622580892, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264622580892, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264622580892, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264622580892, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264622580892, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565171264622580892, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 5565171264898877240, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
       propertyPath: m_Name
       value: Spitfire
@@ -520,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264310612721125704, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: startDelay.scalar
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3264310612721125704, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: startDelay.minMaxState
@@ -536,15 +492,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264310612721125704, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3264310612721125704, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 65
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3264310612721125704, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3264310612721125704, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: InitialModule.startLifetime.minMaxState
@@ -584,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614229471498, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: startDelay.scalar
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614229471498, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: startDelay.minMaxState
@@ -596,15 +552,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614229471498, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614229471498, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 65
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614229471498, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614229471498, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: InitialModule.startLifetime.minMaxState
@@ -636,7 +592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614259775353, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: startDelay.scalar
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614259775353, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: startDelay.minMaxState
@@ -648,15 +604,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614259775353, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614259775353, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 65
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614259775353, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3264310614259775353, guid: 302f71d7912b6734e88d4eebb5627723, type: 3}
       propertyPath: InitialModule.startLifetime.minMaxState
@@ -1097,6 +1053,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 4762066739674344775, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6533898888570299352, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: m_Name
       value: Clouds
@@ -1159,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7230679065079103209, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
@@ -1283,7 +1243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1949369190}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlaneUpgrade, Assembly-CSharp
         m_MethodName: UpgradePlane
         m_Mode: 1
@@ -1409,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 8666860598513225692, guid: 0c901d5691df7544bb574ea43dc50601, type: 3}
+      propertyPath: m_SortingOrder
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 8666860598513225693, guid: 0c901d5691df7544bb574ea43dc50601, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1600,17 +1564,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60b25e56c0d0cb44b6de188415d064b, type: 3}
---- !u!114 &1949369190 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1949369190, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-  m_PrefabInstance: {fileID: 73967067}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed165390e9b9bb9419c77b50f2cd0c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &200980474937806749
 RectTransform:
   m_ObjectHideFlags: 0
