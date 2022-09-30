@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShooting2Guns : MonoBehaviour
+public class EnemyShooting : MonoBehaviour
 {
-
     [SerializeField] private float shootSpeed;
     [SerializeField] private float shootTimer;
     
@@ -13,7 +12,7 @@ public class EnemyShooting2Guns : MonoBehaviour
     [SerializeField] private GameObject bullet;
 
     [SerializeField] private List<ParticleSystem> flashEffects;
-
+    
     private bool isShooting;
     
     // Start is called before the first frame update

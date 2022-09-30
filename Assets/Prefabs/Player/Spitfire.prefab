@@ -4958,7 +4958,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 61278cd8b3133d943a79b3a301b6c555, type: 3}
   - {fileID: 8300000, guid: e415b2c7d31f1e445800c0a121efff05, type: 3}
   spitfireAudio: {fileID: 0}
-  sounds: []
   soundDelay: 0.1
 --- !u!65 &5565171264898877241
 BoxCollider:
@@ -5016,11 +5015,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1622a33ed828baf4390cfbef81759303, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5062,7 +5061,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.9
       inSlope: 0
       outSlope: 0
       tangentMode: 0

@@ -102,8 +102,8 @@ GameObject:
   - component: {fileID: 8733141318489655281}
   - component: {fileID: 8733141318489655286}
   - component: {fileID: 8733141318489655287}
-  - component: {fileID: 8733141318489655284}
   - component: {fileID: 4288203283530809484}
+  - component: {fileID: 695572204411435512}
   m_Layer: 0
   m_Name: Bf-109
   m_TagString: Enemy
@@ -216,29 +216,6 @@ MonoBehaviour:
   movementSpeedZ: 3
   movementSpeedX: 2
   movingRight: 0
---- !u!114 &8733141318489655284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8733141318489655285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66dec8fee7cb653419497d8d193a75ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootSpeed: 1000
-  shootTimer: 1
-  bulletSpawns:
-  - {fileID: 6314660791394352680}
-  - {fileID: 4440941110048348427}
-  - {fileID: 48247716820122645}
-  bullet: {fileID: 7597538765452778029, guid: ab3ca8f7c435ee648ae45d3775ea739a, type: 3}
-  flashEffects:
-  - {fileID: 7067328514627439674}
-  - {fileID: 6765920167436965264}
-  - {fileID: 8291807285525568142}
 --- !u!65 &4288203283530809484
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -252,6 +229,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.359279, y: 6.87907, z: 10.115339}
   m_Center: {x: -0.00000023841858, y: 0.46078277, z: 0.2868688}
+--- !u!114 &695572204411435512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733141318489655285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce040f6696d522242a14443217487010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootSpeed: 1000
+  shootTimer: 1
+  bulletSpawns:
+  - {fileID: 6314660791394352680}
+  - {fileID: 4440941110048348427}
+  - {fileID: 48247716820122645}
+  bullet: {fileID: 7597538765452778029, guid: ab3ca8f7c435ee648ae45d3775ea739a, type: 3}
+  flashEffects:
+  - {fileID: 7067328514627439674}
+  - {fileID: 6765920167436965264}
+  - {fileID: 8291807285525568142}
 --- !u!1001 &728644266223209548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -402,12 +402,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.48
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
       propertyPath: m_LocalPosition.z
@@ -531,12 +535,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.48
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
       propertyPath: m_LocalPosition.z
