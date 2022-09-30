@@ -10,15 +10,17 @@ public class Health : MonoBehaviour
     [Header("Health Variables")]
     [SerializeField] private float maxHealth;
     [SerializeField] public float currentHealth;
+
+    private AudioSource audioSource;
+    [SerializeField] public AudioClip hitSound;
     
     public static float playerHealth;
-    public static bool playerSpawned;
 
     // Start is called before the first frame update
     void Awake()
     {
         currentHealth = maxHealth;
-        playerSpawned = true;
+        audioSource = gameObject.GetComponent<AudioSource>();
         
         if (gameObject.CompareTag(("Player")))
         {
@@ -49,5 +51,6 @@ public class Health : MonoBehaviour
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
+        audioSource.PlayOneShot(hitSound);
     }
 }

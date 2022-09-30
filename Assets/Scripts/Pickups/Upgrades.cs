@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Upgrades : MonoBehaviour
 {
@@ -54,4 +56,28 @@ public class Upgrades : MonoBehaviour
                 break;
         }
     }
-}
+    
+    //private void OnParticleTrigger()
+    //{
+    //    switch(other.name)
+    //    {
+    //        case "Bullets":
+    //            Value = Mathf.RoundToInt(Random.Range(15, 50));
+    //            Score += Value;
+    //            break;
+    //
+    //        case "Engine":
+    //            EngineON.SetActive(true);
+    //            EngineOFF.SetActive(false);
+    //            engineUpgrade = true;
+    //            break;
+    //
+    //        case "Bomb":
+    //            BombON.SetActive(true);
+    //            BombOFF.SetActive(false);
+    //            bombUpgrade = true;
+    //            break;
+    //    }
+    //}
+}   
+    
