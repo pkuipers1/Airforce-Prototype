@@ -45,4 +45,9 @@ public class Health : MonoBehaviour
             SceneManager.LoadScene(2);
         }
     }
+
+    public void TakeDamage(float amount)
+    {
+        currentHealth -= amount;
+    }
 }

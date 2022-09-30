@@ -25,7 +25,7 @@ public class EnemyBulletDeath : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<Health>().currentHealth -= bulletDamage;
+            other.GetComponent<Health>().TakeDamage(bulletDamage);
             Despawn();
         }
         if (other.CompareTag("BulletPlayer"))
