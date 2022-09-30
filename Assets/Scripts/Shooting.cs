@@ -20,7 +20,6 @@ public class Shooting : MonoBehaviour
     
     [SerializeField] public List<AudioClip> machineGunSounds;
     [SerializeField] public AudioSource spitfireAudio;
-    [SerializeField] private List<AudioClip> sounds;
     
     [SerializeField] private float soundDelay;
 
@@ -56,8 +55,6 @@ public class Shooting : MonoBehaviour
         {
             StartCoroutine(Shoot());
         }
-        
-        
     }
 
     IEnumerator Shoot()
@@ -89,19 +86,4 @@ public class Shooting : MonoBehaviour
             yield return new WaitForSeconds(soundDelay);
         }
     }
-    
-    void PickShootSounds(int amount)
-    {
-        for (int i = 0; i < amount; i++)
-        {
-            var randomSound = Random.Range(0, machineGunSounds.Count);
-            sounds.Add(machineGunSounds[randomSound]);
-        }
-
-        for (int i = 0; i < sounds.Count; i++)
-        {
-            var soundDelay = 0f;
-            spitfireAudio.PlayDelayed(soundDelay);
-        }
-    } 
 }
