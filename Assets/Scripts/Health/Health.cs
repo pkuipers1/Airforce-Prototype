@@ -44,6 +44,7 @@ public class Health : MonoBehaviour
 
         if (playerHealth <= 0)
         {
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
             SceneManager.LoadScene(2);
         }
     }
