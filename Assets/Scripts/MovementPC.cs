@@ -58,7 +58,7 @@ public class MovementPC : MonoBehaviour
             rotationY *= 0.88f;
             
         }
-        
+
         transform.rotation = Quaternion.Euler(rotationY, 0, rotationX);
 
         if (playerPositionX < maxPlayerX)
