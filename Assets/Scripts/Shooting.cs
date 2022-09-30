@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
@@ -9,23 +10,28 @@ public class Shooting : MonoBehaviour
     [SerializeField] private float shootTimer;
     
     [SerializeField] private List<Transform> bulletSpawns;
-    
     [SerializeField] private GameObject bullet;
     
-    private bool isShooting;
-    
+    [SerializeField] private bool isShooting;
     [SerializeField] private bool autoShooting;
-
     [SerializeField] public static bool autoFire;
     
-    [SerializeField] public ParticleSystem muzzleFlash;
-    [SerializeField] public ParticleSystem muzzleFlash2;
+    [SerializeField] public List<ParticleSystem> muzzleFlash;
+    
+    [SerializeField] public List<AudioClip> machineGunSounds;
+    [SerializeField] public AudioSource spitfireAudio;
+    [SerializeField] private List<AudioClip> sounds;
+    
+    [SerializeField] private float soundDelay;
+
 
     // Start is called before the first frame update
     void Start()
     {
         autoShooting = false;
         isShooting = false;
+
+        spitfireAudio = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -57,19 +63,43 @@ public class Shooting : MonoBehaviour
     IEnumerator Shoot()
     {
         isShooting = true;
-        
-        GameObject newBullet1 = Instantiate(bullet, bulletSpawns[0].position, Quaternion.identity);
-        GameObject newBullet2 = Instantiate(bullet, bulletSpawns[1].position, Quaternion.identity);
+        int flashIndex = 0;
 
-        muzzleFlash.Play();
-        muzzleFlash2.Play();
-        //newBullet1.GetComponent<GameObject>().transform.rotation = Quaternion.Euler(90, 0, 0); 
-        //newBullet2.GetComponent<GameObject>().transform.rotation = Quaternion.Euler(90, 0, 0); 
+        foreach (var spawn in bulletSpawns)
+        {
+            var newBullet = Instantiate(bullet, spawn.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, shootSpeed * Time.deltaTime);
 
-        newBullet1.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, shootSpeed * Time.deltaTime);
-        newBullet2.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, shootSpeed * Time.deltaTime);
+            muzzleFlash[flashIndex].Play();
+            flashIndex++;
+            
+            StartCoroutine(ShootSounds());
+        }
         
         yield return new WaitForSeconds(shootTimer);
         isShooting = false;
     }
+
+    IEnumerator ShootSounds()
+    {
+        spitfireAudio.PlayOneShot(machineGunSounds[0]);
+        yield return new WaitForSeconds(0.5f);
+        spitfireAudio.PlayOneShot(machineGunSounds[1]);
+        yield return new WaitForSeconds(0.5f);
+    }
+    
+    void PickShootSounds(int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            var randomSound = Random.Range(0, machineGunSounds.Count);
+            sounds.Add(machineGunSounds[randomSound]);
+        }
+
+        for (int i = 0; i < sounds.Count; i++)
+        {
+            var soundDelay = 0f;
+            spitfireAudio.PlayDelayed(soundDelay);
+        }
+    } 
 }
