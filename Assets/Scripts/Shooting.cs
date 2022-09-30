@@ -73,19 +73,21 @@ public class Shooting : MonoBehaviour
             muzzleFlash[flashIndex].Play();
             flashIndex++;
             
-            StartCoroutine(ShootSounds());
+            StartCoroutine(ShootSounds(bulletSpawns.Count));
         }
         
         yield return new WaitForSeconds(shootTimer);
         isShooting = false;
     }
 
-    IEnumerator ShootSounds()
+    IEnumerator ShootSounds(int amount)
     {
-        spitfireAudio.PlayOneShot(machineGunSounds[0]);
-        yield return new WaitForSeconds(0.5f);
-        spitfireAudio.PlayOneShot(machineGunSounds[1]);
-        yield return new WaitForSeconds(0.5f);
+        for (int i = 0; i < amount; i++)
+        {
+            var randomSound = Random.Range(0, machineGunSounds.Count);
+            spitfireAudio.PlayOneShot(machineGunSounds[randomSound]);
+            yield return new WaitForSeconds(soundDelay);
+        }
     }
     
     void PickShootSounds(int amount)
