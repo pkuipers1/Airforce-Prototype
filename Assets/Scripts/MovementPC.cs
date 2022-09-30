@@ -5,21 +5,19 @@ using UnityEngine.UIElements;
 
 public class MovementPC : MonoBehaviour
 {
-    private float playerPositionX;
-    private float playerPositionY;
-    
-    [SerializeField] private float maxPlayerX;
-    [SerializeField] private float maxPlayerY;
-    
-    [SerializeField] private float playerSpeedX;
-    [SerializeField] private float playerSpeedY;
-    
-    [SerializeField] private float rotationSpeedX = 0;
-    [SerializeField] private float rotationSpeedY = 0;
+    private Vector3 playerPosition;
 
-    [SerializeField] private float rotationX = 0;
-    [SerializeField] private float rotationY = 0;
+    [Header("Stats")]
+    [SerializeField] private Vector2 maxPlayerDistance;
+    [SerializeField] private Vector2 playerSpeed;
 
+    [Header("Values")]
+    [SerializeField] private Vector2 rotationSpeed;
+    [SerializeField] private Vector2 currentRotation;
+
+    [SerializeField] private float rotationThreshold;
+
+    [Header("Booleans")]
     [SerializeField] private bool keyPressed;
     
 
@@ -28,91 +26,76 @@ public class MovementPC : MonoBehaviour
     {
         keyPressed = false;
         
-        playerPositionX = transform.position.x;
-        playerPositionY = transform.position.z;
-        
-        if(rotationX < 60 && rotationX > -60)
-        {
-            rotationX += rotationSpeedX;    
-        }
-        
-        if(rotationY < 60 && rotationY > -60)
-        {
-            rotationY += rotationSpeedY;    
-        }
+        playerPosition.x = transform.position.x;
+        playerPosition.z = transform.position.z;
 
-        if (!keyPressed)
-        {
-            rotationSpeedX *= 0.1f;
-            rotationSpeedY *= 0.1f;
-        }
+        var rotationThresholdX = currentRotation.x < rotationThreshold && currentRotation.x > -rotationThreshold;
+        var rotationThresholdY = currentRotation.y < rotationThreshold && currentRotation.y > -rotationThreshold;
         
-        if (rotationX != 0)
-        {
-            rotationX *= 0.88f;
-            
-        }
-        
-        if (rotationY != 0)
-        {
-            rotationY *= 0.88f;
-            
-        }
+        if(rotationThresholdX) currentRotation.x += rotationSpeed.x;
 
-        transform.rotation = Quaternion.Euler(rotationY, 0, rotationX);
+        if(rotationThresholdY) currentRotation.y += rotationSpeed.y;
 
-        if (playerPositionX < maxPlayerX)
+        if (!keyPressed) currentRotation *= 0.1f;
+
+        if (currentRotation.x != 0) currentRotation.x *= 0.88f;
+
+        if (currentRotation.y != 0) currentRotation.y *= 0.88f;
+
+        transform.rotation = Quaternion.Euler(currentRotation.y, 0, currentRotation.x);
+
+        if (playerPosition.x < maxPlayerDistance.x)
         {
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 keyPressed = true;
 
-                transform.position += Vector3.right * Time.deltaTime * playerSpeedX;
-                if (rotationSpeedX <= 10)
+                transform.position += Vector3.right * Time.deltaTime * playerSpeed.x;
+                if (rotationSpeed.x <= 10)
                 {
-                    rotationSpeedX -=5;
+                    rotationSpeed.x -=5;
                 }
             }
         }
 
-        if (playerPositionX > -maxPlayerX)
+        if (playerPosition.x > -maxPlayerDistance.x)
         {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 keyPressed = true;
 
-                transform.position += Vector3.left * Time.deltaTime * playerSpeedX;
-                if (rotationSpeedX <= 10)
+                transform.position += Vector3.left * Time.deltaTime * playerSpeed.x;
+                if (rotationSpeed.x <= 10)
                 {
-                    rotationSpeedX += 5;
+                    rotationSpeed.x += 5;
                 }
             }
         }
 
-        if (playerPositionY > -maxPlayerY)
+        if (playerPosition.z > -maxPlayerDistance.y -12)
         {
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 keyPressed = true;
                 
-                transform.position += Vector3.back * Time.deltaTime * playerSpeedY;
-                if (rotationSpeedY <= 5)
+                transform.position += Vector3.back * Time.deltaTime * playerSpeed.y;
+                if (rotationSpeed.y <= 5)
                 {
-                    rotationSpeedY -=2;
+                    rotationSpeed.y -=2;
                 }
             }
         }
         
-        if (playerPositionY < maxPlayerY)
+        if (playerPosition.z < maxPlayerDistance.y)
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {
                 keyPressed = true;
                 
-                transform.position += Vector3.forward * Time.deltaTime * playerSpeedY;
-                if (rotationSpeedY <= 5)
+                transform.position += Vector3.forward * Time.deltaTime * playerSpeed.y;
+                if (rotationSpeed.y <= 5)
                 {
-                    rotationSpeedY +=2;
+                    rotationSpeed.y +=2;
                 }
             }
         }

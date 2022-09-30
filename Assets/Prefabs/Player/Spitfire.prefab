@@ -4874,10 +4874,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5565171264898877243}
   - component: {fileID: 5565171264898877244}
+  - component: {fileID: 1566455488231828887}
   - component: {fileID: 5565171264898877245}
   - component: {fileID: 5565171264898877241}
   - component: {fileID: 1975388416}
   - component: {fileID: 1949369191}
+  - component: {fileID: 7597471975583612376}
   m_Layer: 3
   m_Name: Spitfire
   m_TagString: Player
@@ -4913,19 +4915,35 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5565171264898877240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 428bcf886f196a3418ba71577bbb7b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayerX: 14
-  maxPlayerY: 25
-  playerSpeedX: 15
-  playerSpeedY: 20
-  rotationSpeedX: 0
-  rotationSpeedY: 0
-  rotationX: 0
-  rotationY: 0
+  maxPlayerDistance: {x: 14, y: 13}
+  playerSpeed: {x: 15, y: 20}
+  rotationSpeed: {x: 0, y: 0}
+  currentRotation: {x: 0, y: 0}
+  rotationThreshold: 0
+  keyPressed: 0
+--- !u!114 &1566455488231828887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565171264898877240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c7fb55c86ecea46a951413cd688723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  vertical: 0
+  playerSpeed: {x: 15, y: 0, z: 20}
+  rotationSpeed: {x: 0, y: 0, z: 0}
+  currentRotation: {x: 0, y: 0, z: 0}
+  rotationThreshold: 60
   keyPressed: 0
 --- !u!114 &5565171264898877245
 MonoBehaviour:
@@ -4956,7 +4974,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5565171264898877240}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 7.6927795, y: 6.4628396, z: 2.1400442}
@@ -4994,6 +5012,22 @@ MonoBehaviour:
   EngineOFF: {fileID: 0}
   BombON: {fileID: 0}
   BombOFF: {fileID: 0}
+--- !u!54 &7597471975583612376
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565171264898877240}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6950608446472252254
 GameObject:
   m_ObjectHideFlags: 0
