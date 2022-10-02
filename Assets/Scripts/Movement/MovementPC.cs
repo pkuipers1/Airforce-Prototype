@@ -63,7 +63,7 @@ public class MovementPC : MonoBehaviour
 
         if (playerPositionX < maxPlayerX)
         {
-            if (Input.GetKey(KeyCode.RightArrow))
+            /*if (Input.GetKey(KeyCode.RightArrow))
             {
                 keyPressed = true;
 
@@ -72,12 +72,12 @@ public class MovementPC : MonoBehaviour
                 {
                     rotationSpeedX -=5;
                 }
-            }
+            }*/
         }
 
         if (playerPositionX > -maxPlayerX)
         {
-            if (Input.GetKey(KeyCode.LeftArrow))
+            /*if (Input.GetKey(KeyCode.LeftArrow))
             {
                 keyPressed = true;
 
@@ -86,12 +86,12 @@ public class MovementPC : MonoBehaviour
                 {
                     rotationSpeedX += 5;
                 }
-            }
+            }*/
         }
 
         if (playerPositionY > -maxPlayerY)
         {
-            if (Input.GetKey(KeyCode.DownArrow))
+            /*if (Input.GetKey(KeyCode.DownArrow))
             {
                 keyPressed = true;
                 
@@ -100,12 +100,12 @@ public class MovementPC : MonoBehaviour
                 {
                     rotationSpeedY -=2;
                 }
-            }
+            }*/
         }
         
         if (playerPositionY < maxPlayerY)
         {
-            if (Input.GetKey(KeyCode.UpArrow))
+            /*if (Input.GetKey(KeyCode.UpArrow))
             {
                 keyPressed = true;
                 
@@ -114,7 +114,7 @@ public class MovementPC : MonoBehaviour
                 {
                     rotationSpeedY +=2;
                 }
-            }
+            }*/
         }
     }
 }

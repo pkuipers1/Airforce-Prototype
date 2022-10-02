@@ -36,7 +36,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !autoShooting)
+        /*if (Input.GetKeyDown(KeyCode.E) && !autoShooting)
         {
             autoShooting = true;
             autoFire = true;
@@ -54,9 +54,14 @@ public class Shooting : MonoBehaviour
         else if (autoShooting && !isShooting)
         {
             StartCoroutine(Shoot());
-        }
+        }*/
     }
 
+    public void InitialisShooting()
+    {
+        StartCoroutine(Shoot());
+    }
+    
     IEnumerator Shoot()
     {
         isShooting = true;
