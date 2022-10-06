@@ -150,6 +150,46 @@ PrefabInstance:
       propertyPath: ScoreText
       value: 
       objectReference: {fileID: 2507255081493387681}
+    - target: {fileID: 948714577522784393, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297465476971492021, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600729474850238689, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600729474850238689, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600729474850238689, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771018911275905744, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894773030155113201, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235378870514352333, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325966385370808397, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513793147245697727, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5565171264898877240, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
       propertyPath: m_Name
       value: Spitfire
@@ -196,6 +236,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5565171264898877243, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098902345864083125, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296496413869493272, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296496413869493272, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296496413869493272, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296496413869493272, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694494294767082346, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913916102917823168, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

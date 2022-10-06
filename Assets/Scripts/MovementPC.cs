@@ -59,11 +59,6 @@ public class MovementPC : MonoBehaviour
             
         }
         
-        Debug.Log("rotation X: " + rotationX);
-        Debug.Log("rotation speed X: " + rotationSpeedX);
-        
-        Debug.Log("rotation Y: " + rotationY);
-        Debug.Log("rotation speed Y: " + rotationSpeedY);
         
         transform.rotation = Quaternion.Euler(rotationY, 0, rotationX);
 
