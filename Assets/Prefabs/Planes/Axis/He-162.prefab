@@ -40,11 +40,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4857970375661893277}
   - component: {fileID: 4857970375661893276}
-  - component: {fileID: 4857970375661893279}
   - component: {fileID: 4857970375661893278}
   - component: {fileID: 3110644489096588273}
   - component: {fileID: 9191223831100119585}
   - component: {fileID: 2456855184196402511}
+  - component: {fileID: 8016282722957467867}
   m_Layer: 0
   m_Name: He-162
   m_TagString: Enemy
@@ -120,25 +120,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4857970375661893279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4857970375661893281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ae04f0c535075c42a4709b8f24c8512, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 100000, guid: fb1312d91b8716042b1151f9b514fc16, type: 3}
-  smoke1: {fileID: 0}
-  smoke2: {fileID: 0}
-  hitSound: {fileID: 0}
-  deathSound: {fileID: 8300000, guid: d82e7494bea4dc442809f754a3179e49, type: 3}
-  maxHealth: 100
-  currentHealth: 0
 --- !u!114 &4857970375661893278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,6 +265,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8016282722957467867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857970375661893281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae04f0c535075c42a4709b8f24c8512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 100000, guid: fb1312d91b8716042b1151f9b514fc16, type: 3}
+  smoke1: {fileID: 3742482348428993186}
+  smoke2: {fileID: 3742482348428993186}
+  hitSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 9f2e6d46ce5595d4db77a4c1f45e1030, type: 3}
+  maxHealth: 100
+  currentHealth: 0
 --- !u!1001 &4759968660700142745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -399,5 +399,10 @@ PrefabInstance:
 --- !u!4 &3742482348428993197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
+  m_PrefabInstance: {fileID: 4851580068379901716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3742482348428993186 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8123281516263480758, guid: 08cd700c25c86344e9969171461fb223, type: 3}
   m_PrefabInstance: {fileID: 4851580068379901716}
   m_PrefabAsset: {fileID: 0}

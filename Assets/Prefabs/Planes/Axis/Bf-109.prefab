@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 100000, guid: fb1312d91b8716042b1151f9b514fc16, type: 3}
-  smoke1: {fileID: 0}
-  smoke2: {fileID: 0}
+  smoke1: {fileID: 6307230711193455047}
+  smoke2: {fileID: 1759861958178673756}
   hitSound: {fileID: 0}
   deathSound: {fileID: 8300000, guid: d82e7494bea4dc442809f754a3179e49, type: 3}
   maxHealth: 100
@@ -553,6 +553,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
   m_PrefabInstance: {fileID: 2827268162968310897}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &6307230711193455047 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8123281516263480758, guid: 08cd700c25c86344e9969171461fb223, type: 3}
+  m_PrefabInstance: {fileID: 2827268162968310897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3886038327131690470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -684,5 +689,10 @@ PrefabInstance:
 --- !u!4 &1759861958178673747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8123281516263480761, guid: 08cd700c25c86344e9969171461fb223, type: 3}
+  m_PrefabInstance: {fileID: 7554780267988584938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1759861958178673756 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8123281516263480758, guid: 08cd700c25c86344e9969171461fb223, type: 3}
   m_PrefabInstance: {fileID: 7554780267988584938}
   m_PrefabAsset: {fileID: 0}
