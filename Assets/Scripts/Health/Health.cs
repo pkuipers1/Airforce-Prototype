@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     public ParticleSystem smoke2;
 
     private AudioSource audioSource;
+    
     [SerializeField] public AudioClip hitSound;
     [SerializeField] public AudioClip deathSound;
 
@@ -38,7 +39,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
-            audioSource.PlayOneShot(deathSound);
+            GameObject.Find("SoundFX").GetComponent<AudioSource>().PlayOneShot(deathSound);
             Destroy(gameObject);
         }
 
@@ -50,7 +51,7 @@ public class Health : MonoBehaviour
         if (playerHealth <= 0)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
-            audioSource.PlayOneShot(deathSound);
+            GameObject.Find("SoundFX").GetComponent<AudioSource>().PlayOneShot(deathSound);
             SceneManager.LoadScene(2);
         }
 
