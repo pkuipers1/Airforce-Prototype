@@ -39,5 +39,6 @@ public class EnemyBulletDeath : MonoBehaviour
         Instantiate(impactEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+    
 
 }

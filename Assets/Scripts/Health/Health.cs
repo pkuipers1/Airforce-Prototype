@@ -8,21 +8,23 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject explosionEffect;
     public ParticleSystem smoke1;
     public ParticleSystem smoke2;
-
-    [Header("Health Variables")] [SerializeField]
-    private float maxHealth;
-
+    
+    private AudioSource audioSource;
+    [SerializeField] public AudioClip hitSound;
+    [SerializeField] public AudioClip deathSound;
+    
+    [Header("Health Variables")]
+    [SerializeField] private float maxHealth;
     [SerializeField] public float currentHealth;
-
+    
     public static float playerHealth;
-    public static bool playerSpawned;
 
     // Start is called before the first frame update
     void Awake()
     {
         currentHealth = maxHealth;
-        playerSpawned = true;
-
+        audioSource = gameObject.GetComponent<AudioSource>();
+        
         if (gameObject.CompareTag(("Player")))
         {
             playerHealth = Mathf.RoundToInt(currentHealth);
@@ -35,6 +37,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            audioSource.PlayOneShot(deathSound);
             Destroy(gameObject);
         }
 
@@ -45,9 +48,11 @@ public class Health : MonoBehaviour
 
         if (playerHealth <= 0)
         {
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            audioSource.PlayOneShot(deathSound);
             SceneManager.LoadScene(2);
         }
-
+        
         if (this.CompareTag("Player"))
         {
             if (currentHealth <= ((maxHealth / 10) * 8) && currentHealth > ((maxHealth / 10) * 6))
@@ -103,5 +108,12 @@ public class Health : MonoBehaviour
             }
         }
     }
+
+    public void TakeDamage(float amount)
+    {
+        currentHealth -= amount;
+        audioSource.PlayOneShot(hitSound);
+    }
+    
 }
 

@@ -105,11 +105,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae04f0c535075c42a4709b8f24c8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
-  maxHealth: 100
-  currentHealth: 0
+  explosionEffect: {fileID: 100000, guid: fb1312d91b8716042b1151f9b514fc16, type: 3}
+  smoke1: {fileID: 0}
+  smoke2: {fileID: 0}
   hitSound: {fileID: 0}
   deathSound: {fileID: 8300000, guid: d82e7494bea4dc442809f754a3179e49, type: 3}
+  maxHealth: 100
+  currentHealth: 0
 --- !u!114 &8431617774686678235
 MonoBehaviour:
   m_ObjectHideFlags: 0
