@@ -4873,7 +4873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5565171264898877243}
-  - component: {fileID: 1566455488231828887}
+  - component: {fileID: 7343173670511231708}
   - component: {fileID: 5565171264898877245}
   - component: {fileID: 5565171264898877241}
   - component: {fileID: 1975388416}
@@ -4907,7 +4907,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &1566455488231828887
+--- !u!114 &7343173670511231708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4922,7 +4922,7 @@ MonoBehaviour:
   horizontal: 0
   vertical: 0
   playerSpeed: {x: 15, y: 0, z: 20}
-  rotationSpeed: {x: 0, y: 0, z: 0}
+  rotationSpeed: {x: 1, y: 0, z: 1}
   currentRotation: {x: 0, y: 0, z: 0}
   rotationThreshold: 60
   keyPressed: 0
