@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     [SerializeField] private GameObject explosionEffect;
-    
+
+    public GameObject[] smokeEffects;
+
     [Header("Health Variables")]
     [SerializeField] private float maxHealth;
     [SerializeField] public float currentHealth;
@@ -24,6 +26,10 @@ public class Health : MonoBehaviour
         {
             playerHealth = Mathf.RoundToInt(currentHealth);
         }
+
+        DisableSmoke();
+        smokeEffects[0].SetActive(true);
+        smokeEffects[1].SetActive(true);
     }
 
     // Update is called once per frame
@@ -43,6 +49,39 @@ public class Health : MonoBehaviour
         if (playerHealth <= 0)
         {
             SceneManager.LoadScene(2);
+        }
+
+        if (currentHealth <= ((maxHealth / 10) * 8) && currentHealth > ((maxHealth / 10) * 6))
+        {
+            DisableSmoke();
+            smokeEffects[2].SetActive(true);
+            smokeEffects[3].SetActive(true);
+        }
+        else if (currentHealth <= ((maxHealth / 10) * 6) && currentHealth > ((maxHealth / 10) * 4))
+        {
+            DisableSmoke();
+            smokeEffects[4].SetActive(true);
+            smokeEffects[5].SetActive(true);
+        }
+        else if (currentHealth <= ((maxHealth / 10) * 4) && currentHealth > ((maxHealth / 10) * 2))
+        {
+            DisableSmoke();
+            smokeEffects[6].SetActive(true);
+            smokeEffects[7].SetActive(true);
+        }
+        else if (currentHealth <= ((maxHealth / 10) * 2) && currentHealth > ((maxHealth / 10) * 1))
+        {
+            DisableSmoke();
+            smokeEffects[8].SetActive(true);
+            smokeEffects[9].SetActive(true);
+        }
+    }
+
+    void DisableSmoke()
+    {
+        foreach (var smoke in smokeEffects)
+        {
+            smoke.SetActive(false);
         }
     }
 }
