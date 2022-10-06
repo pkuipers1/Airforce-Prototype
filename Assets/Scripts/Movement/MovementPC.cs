@@ -89,7 +89,7 @@ public class MovementPC : MonoBehaviour
             }
         }
 
-        if (playerPositionY > -maxPlayerY)
+        if (playerPositionY > -maxPlayerY - 12)
         {
             if (Input.GetKey(KeyCode.DownArrow))
             {

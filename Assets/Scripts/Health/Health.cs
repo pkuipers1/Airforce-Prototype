@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
 
     private AudioSource audioSource;
     [SerializeField] public AudioClip hitSound;
+    [SerializeField] public AudioClip deathSound;
     
     public static float playerHealth;
 
@@ -31,9 +32,11 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(deathSound.name);
         if (currentHealth <= 0)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            audioSource.PlayOneShot(deathSound);
             Destroy(gameObject);
         }
 
@@ -45,6 +48,7 @@ public class Health : MonoBehaviour
         if (playerHealth <= 0)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            audioSource.PlayOneShot(deathSound);
             SceneManager.LoadScene(2);
         }
     }

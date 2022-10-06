@@ -4984,9 +4984,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae04f0c535075c42a4709b8f24c8512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 4629358791550953202, guid: 6efec460d313a10488cf3271a941c730, type: 3}
+  explosionEffect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   maxHealth: 100
   currentHealth: 0
+  hitSound: {fileID: 8300000, guid: b83aab5354f3ad04e88a15968a47aac5, type: 3}
+  deathSound: {fileID: 0}
 --- !u!114 &1949369191
 MonoBehaviour:
   m_ObjectHideFlags: 0
