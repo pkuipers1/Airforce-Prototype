@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
+    private SpriteRenderer visual;
     
     [Header("AXIS")]
     [SerializeField] private float horizontal;
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        visual = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()
@@ -47,7 +50,9 @@ public class PlayerMovement : MonoBehaviour
         
         if (!isMoving) currentRotation *= rotationReturner;
 
-        transform.rotation = Quaternion.Euler(currentRotation);
+        var applyAbleRotation = new Vector3(currentRotation.x, currentRotation.z, 0);
+        
+        visual.transform.localEulerAngles = applyAbleRotation;
     }
 
     private void FixedUpdate()
