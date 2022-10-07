@@ -38,59 +38,17 @@ public class PlayerMovement : MonoBehaviour
         var rotationThresholdX = currentRotation.x < rotationThreshold && currentRotation.x > -rotationThreshold;
         var rotationThresholdZ = currentRotation.z < rotationThreshold && currentRotation.z > -rotationThreshold;
         
-        if(rotationThresholdX) currentRotation.x += rotationSpeed.x;
+        if(rotationThresholdX && vertical > 0) currentRotation.x += rotationSpeed.x;
+        else if(rotationThresholdX && vertical < 0) currentRotation.x -= rotationSpeed.x;
 
-        if(rotationThresholdZ) currentRotation.z += rotationSpeed.z;
-
-        if (!isMoving) currentRotation = Vector3.zero;
-
-        if (horizontal != 0 && currentRotation.x != 0)
-        {
-            if(currentRotation.x > 0) 
-            {
-                currentRotation.x *= 0.5f;
-            }
-            else if(currentRotation.x < 0) 
-            {
-                currentRotation.x /= 0.5f;
-            }
-            Debug.Log("X: " + currentRotation.x);
-        }
-
-        if (vertical != 0 && currentRotation.x != 0)
-        {
-            if(currentRotation.z > 0) 
-            {
-                currentRotation.z *= 0.5f;
-            }
-            else if(currentRotation.z < 0) 
-            {
-                currentRotation.z /= 0.5f;
-            }
-            Debug.Log("Z: " + currentRotation.z);
-        }
-
-        transform.rotation = Quaternion.Euler(currentRotation.x, 0, currentRotation.z);
+        if(rotationThresholdZ && horizontal > 0) currentRotation.z += rotationSpeed.z;
+        else if(rotationThresholdZ && horizontal < 0) currentRotation.z -= rotationSpeed.z;
         
-        /*var rotationThresholdX = currentRotation.x < rotationThreshold && currentRotation.x > -rotationThreshold;
-        var rotationThresholdZ = currentRotation.z < rotationThreshold && currentRotation.z > -rotationThreshold;
-
-        if(!isMoving) return;
-        if (rotationThresholdX && horizontal != 0) currentRotation.x += rotationSpeed.x;
-        if (rotationThresholdZ && vertical != 0) currentRotation.z += rotationSpeed.z;
-
-        currentRotation.x *= rotationSpeed.x;
-        currentRotation.z *= rotationSpeed.z;
-
-        //if (!keyPressed) currentRotation *= 0.1f;
-
-        if (currentRotation.x != 0) currentRotation.x *= 0.88f;
-        if (currentRotation.z != 0) currentRotation.z *= 0.88f;
-
+        if (!isMoving) currentRotation *= 0.88f;
+        
         Debug.Log(currentRotation);
-        
-        //transform.Rotate(currentRotation);
-        Debug.Log(transform.rotation);*/
+
+        transform.rotation = Quaternion.Euler(currentRotation);
     }
 
     private void FixedUpdate()

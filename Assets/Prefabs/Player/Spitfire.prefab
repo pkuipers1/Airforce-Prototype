@@ -4924,8 +4924,8 @@ MonoBehaviour:
   playerSpeed: {x: 15, y: 0, z: 20}
   rotationSpeed: {x: 1, y: 0, z: 1}
   currentRotation: {x: 0, y: 0, z: 0}
-  rotationThreshold: 60
-  keyPressed: 0
+  rotationThreshold: 30
+  isMoving: 0
 --- !u!114 &5565171264898877245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4958,8 +4958,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.6927795, y: 6.4628396, z: 2.1400442}
-  m_Center: {x: 0, y: 0.032366276, z: -0.09710842}
+  m_Size: {x: 7.7, y: 6.5, z: 2.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1975388416
 MonoBehaviour:
   m_ObjectHideFlags: 0
