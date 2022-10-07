@@ -209,6 +209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a39373f42e7c7043bbed7f4a428525f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactEffect: {fileID: 5491333802220862987, guid: 6ea23778203b4544fb38ee5030fef8ff, type: 3}
+  impactEffect: {fileID: 215459664507292747, guid: 22382819496abfa448e9d51826876ef8, type: 3}
   lifespan: 5
   bulletDamage: 2.5
