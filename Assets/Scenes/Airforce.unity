@@ -243,6 +243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clouds (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6533898888570299352, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6926156957868996505, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1101,6 +1105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clouds
       objectReference: {fileID: 0}
+    - target: {fileID: 6533898888570299352, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6926156957868996505, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1279,7 +1287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8666860598513225505, guid: 0c901d5691df7544bb574ea43dc50601, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8666860598513225692, guid: 0c901d5691df7544bb574ea43dc50601, type: 3}
       propertyPath: m_Camera
@@ -1502,6 +1510,10 @@ PrefabInstance:
     - target: {fileID: 6533898888570299352, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: m_Name
       value: Clouds (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533898888570299352, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6926156957868996505, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: m_RootOrder
