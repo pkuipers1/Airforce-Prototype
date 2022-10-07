@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Values")]
     [SerializeField] private Vector3 rotationSpeed;
     [SerializeField] private Vector3 currentRotation;
+    [SerializeField] private float rotationReturner = 0.88f;
 
     [SerializeField] private float rotationThreshold;
 
@@ -38,15 +39,13 @@ public class PlayerMovement : MonoBehaviour
         var rotationThresholdX = currentRotation.x < rotationThreshold && currentRotation.x > -rotationThreshold;
         var rotationThresholdZ = currentRotation.z < rotationThreshold && currentRotation.z > -rotationThreshold;
         
-        if(rotationThresholdX && vertical > 0) currentRotation.x += rotationSpeed.x;
-        else if(rotationThresholdX && vertical < 0) currentRotation.x -= rotationSpeed.x;
+        if(rotationThresholdX && vertical > 0) currentRotation.x -= rotationSpeed.x;
+        else if(rotationThresholdX && vertical < 0) currentRotation.x += rotationSpeed.x;
 
         if(rotationThresholdZ && horizontal > 0) currentRotation.z += rotationSpeed.z;
         else if(rotationThresholdZ && horizontal < 0) currentRotation.z -= rotationSpeed.z;
         
-        if (!isMoving) currentRotation *= 0.88f;
-        
-        Debug.Log(currentRotation);
+        if (!isMoving) currentRotation *= rotationReturner;
 
         transform.rotation = Quaternion.Euler(currentRotation);
     }
