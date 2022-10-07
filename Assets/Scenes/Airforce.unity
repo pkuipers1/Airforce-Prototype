@@ -1107,15 +1107,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6926156957868996505, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.526473
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6926156957868996505, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16256213
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6926156957868996505, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.30581987
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6926156957868996505, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1163,24 +1163,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68fcf54a7a815140beae806b142bf49, type: 3}
---- !u!1 &1691739330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5565171264898877240, guid: 741edb69b1f43bc49beef450fb5bb953, type: 3}
-  m_PrefabInstance: {fileID: 73967067}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1691739331
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691739330}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 6.470169, z: 2.1163611}
-  m_Center: {x: 0, y: 0.05581808, z: -0.1116364}
 --- !u!1 &1772382398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,6 +1276,10 @@ PrefabInstance:
     - target: {fileID: 8666860598513225505, guid: 0c901d5691df7544bb574ea43dc50601, type: 3}
       propertyPath: m_Name
       value: CanvasBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666860598513225505, guid: 0c901d5691df7544bb574ea43dc50601, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8666860598513225692, guid: 0c901d5691df7544bb574ea43dc50601, type: 3}
       propertyPath: m_Camera
