@@ -14,5 +14,5 @@ Patricia Kuipers (me):
 - Enemy spawner
 - Health
 
-Bas de Reus:
+Bas de Reus (https://github.com/bas-boop):
 - Example Mechanic
